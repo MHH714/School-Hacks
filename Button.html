@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainbow</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .rainbow-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 300px;
+            font-family: serif;
+            color: white;
+            cursor: pointer;
+            background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+            background-size: 300% 300%;
+            transition: background-position 2s;
+        }
+        .rainbow-button:hover {
+            background-position: 100% 0;
+        }
+        /* Hide tooltip on hover */
+        .rainbow-button::after {
+            content: '';
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <button class="rainbow-button" onclick="redirectToGoogle()">
+        Click me!
+    </button>
+
+    <script>
+        function redirectToGoogle() {
+            window.location.href = 'https://www.tmarmikbux.net';
+        }
+    </script>
+</body>
+</html>
