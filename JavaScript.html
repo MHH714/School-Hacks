@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Code Runner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            font-family: monospace;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Code Runner</h1>
+    <textarea id="codeInput" placeholder="Enter JavaScript code here..."></textarea><br>
+    <button onclick="runCode()">Run Code</button>
+
+    <script>
+        function runCode() {
+            const code = document.getElementById('codeInput').value;
+            try {
+                // Use eval to run the user's code
+                eval(code);
+            } catch (e) {
+                console.error('Error executing code:', e);
+                alert('Error executing code: ' + e.message);
+            }
+        }
+    </script>
+</body>
+</html>
